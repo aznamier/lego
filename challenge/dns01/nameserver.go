@@ -71,12 +71,12 @@ func AddRecursiveNameservers(nameservers []string) ChallengeOption {
 
 // getNameservers attempts to get systems nameservers before falling back to the defaults
 func getNameservers(path string, defaults []string) []string {
-	config, err := dns.ClientConfigFromFile(path)
-	if err != nil || len(config.Servers) == 0 {
+	//config, err := dns.ClientConfigFromFile(path)
+	//if err != nil || len(config.Servers) == 0 {
 		return defaults
-	}
+	//}
 
-	return ParseNameservers(config.Servers)
+	//return ParseNameservers(config.Servers)
 }
 
 func ParseNameservers(servers []string) []string {
