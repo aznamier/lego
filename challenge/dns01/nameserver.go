@@ -26,7 +26,7 @@ var defaultNameservers = []string{
 }
 
 // recursiveNameservers are used to pre-check DNS propagation
-var recursiveNameservers = getNameservers(defaultResolvConf, defaultNameservers)
+var recursiveNameservers = defaultNameservers
 
 // soaCacheEntry holds a cached SOA record (only selected fields)
 type soaCacheEntry struct {
